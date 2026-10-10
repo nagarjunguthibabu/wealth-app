@@ -1,16 +1,1 @@
-{
-  "name": "Wealth Compass V4",
-  "short_name": "Wealth",
-  "start_url": "./",
-  "display": "standalone",
-  "background_color": "#06100c",
-  "theme_color": "#07110d",
-  "icons": [
-    {
-      "src": "icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
-    }
-  ]
-}
+{"name":"Wealth Compass V4.1","short_name":"Wealth","start_url":"./","display":"standalone","background_color":"#06100c","theme_color":"#07110d"}
