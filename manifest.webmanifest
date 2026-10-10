@@ -3,8 +3,8 @@
   "short_name": "Wealth",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#071018",
-  "theme_color": "#0b1220",
+  "background_color": "#07100d",
+  "theme_color": "#08120f",
   "icons": [
     {
       "src": "icon.svg",

@@ -1,18 +1,19 @@
-# Wealth Compass
+# Wealth Compass V2
 
-A private, mobile-friendly wealth tracker for assets in SEK and INR.
+## 1. Create the database
+Open your Supabase project, go to **SQL Editor**, paste the complete contents of `supabase-setup.sql`, and run it once.
 
-## Run locally
-Open `index.html` in a browser. For offline install support, serve the folder through a simple web server or GitHub Pages.
+## 2. Deploy
+Upload these files to the root of your GitHub repository. In **Settings > Pages**, deploy from the `main` branch and root folder.
 
-## Publish with GitHub Pages
-1. Create a new public or private repository.
-2. Upload all files from this folder to the repository root.
-3. In repository Settings > Pages, choose **Deploy from a branch**, select `main` and `/ (root)`, then save.
-4. Open the published site on your phone and choose **Add to Home Screen**.
+## 3. Authentication
+Create an account from the app. If Supabase email confirmation is enabled, confirm the email before signing in.
 
-## Data and privacy
-Data is stored only in the browser on the current device using local storage. Use **Export CSV** regularly for backup. Clearing browser storage or switching devices will not carry the data across automatically.
+## 4. Exchange rates
+The app requests SEK to INR reference rates from Frankfurter. It stores the exact rate with each snapshot, so older numbers do not change later. You can override a fetched rate.
 
-## Exchange rate
-The app expects **INR per 1 SEK**. Example: if 1 SEK equals 8 INR, enter 8. The app converts INR assets to SEK by dividing by the rate, and SEK assets to INR by multiplying by it.
+## 5. CSV import
+Export Excel as CSV. The importer recognises `Date` or `Month`, `INR/SEK Rate`, and the default category names. A Month such as `2026-10` is stored as `2026-10-01`.
+
+## Security
+The browser contains a Supabase anonymous/public key, which is expected for a client app. The SQL file enables Row Level Security, ensuring signed-in users can access only rows where `user_id` matches their account. Never place a Supabase service-role key in this app.
