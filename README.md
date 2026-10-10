@@ -1,19 +1,26 @@
-# Wealth Compass V2
+# Wealth Compass V3
 
-## 1. Create the database
-Open your Supabase project, go to **SQL Editor**, paste the complete contents of `supabase-setup.sql`, and run it once.
+## Upgrade from V2
+1. In Supabase, open SQL Editor.
+2. Run the complete `supabase-v3.sql` file once. It adds comments, contributions and FIRE settings while keeping existing snapshot data.
+3. Replace the old GitHub repository files with all V3 files.
+4. If the installed phone app still shows V2, remove it from the Home Screen, refresh the website, then add it again.
 
-## 2. Deploy
-Upload these files to the root of your GitHub repository. In **Settings > Pages**, deploy from the `main` branch and root folder.
+## New in V3
+- Snapshot comments
+- NW / NW without pension chart toggle
+- Create and edit assets
+- Classify every asset by asset class, risk and country
+- Allocation selector for asset class, risk, country, currency or individual asset
+- Optional net contribution field and residual market + FX effect
+- FIRE target and progress
+- Full-date storage with Mon YYYY display
+- CSV import/export
+- Online current or historical SEK/INR reference rate
+- Supabase login and private cloud data
+- Installable PWA
 
-## 3. Authentication
-Create an account from the app. If Supabase email confirmation is enabled, confirm the email before signing in.
-
-## 4. Exchange rates
-The app requests SEK to INR reference rates from Frankfurter. It stores the exact rate with each snapshot, so older numbers do not change later. You can override a fetched rate.
-
-## 5. CSV import
-Export Excel as CSV. The importer recognises `Date` or `Month`, `INR/SEK Rate`, and the default category names. A Month such as `2026-10` is stored as `2026-10-01`.
-
-## Security
-The browser contains a Supabase anonymous/public key, which is expected for a client app. The SQL file enables Row Level Security, ensuring signed-in users can access only rows where `user_id` matches their account. Never place a Supabase service-role key in this app.
+## Contribution logic
+Enter net new money added during the period in SEK. The app calculates:
+`Market + FX effect = change in net worth - net contribution`
+This residual combines market movement and currency movement. It does not falsely claim to separate those two without transaction-level data.

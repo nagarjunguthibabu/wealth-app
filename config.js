@@ -1,4 +1,1 @@
-window.APP_CONFIG = {
-  SUPABASE_URL: 'https://lfxbaepqlncvlzlekfup.supabase.co',
-  SUPABASE_ANON_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxmeGJhZXBxbG5jdmx6bGVrZnVwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE2NTA3MTMsImV4cCI6MjEwNzIyNjcxM30.fTNpukgKoB9JqSBEKaOfaVPzm3UvTIAXRYjIdeA4rhs'
-};
+window.APP_CONFIG={SUPABASE_URL:'https://lfxbaepqlncvlzlekfup.supabase.co',SUPABASE_ANON_KEY:'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxmeGJhZXBxbG5jdmx6bGVrZnVwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE2NTA3MTMsImV4cCI6MjEwNzIyNjcxM30.fTNpukgKoB9JqSBEKaOfaVPzm3UvTIAXRYjIdeA4rhs'};

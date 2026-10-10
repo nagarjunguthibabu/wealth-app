@@ -1,10 +1,10 @@
 {
-  "name": "Wealth Compass",
+  "name": "Wealth Compass V3",
   "short_name": "Wealth",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#07100d",
-  "theme_color": "#08120f",
+  "background_color": "#06100c",
+  "theme_color": "#07110d",
   "icons": [
     {
       "src": "icon.svg",
