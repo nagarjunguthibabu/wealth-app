@@ -1,26 +1,22 @@
-# Wealth Compass V3
+# Wealth Compass V4
 
-## Upgrade from V2
-1. In Supabase, open SQL Editor.
-2. Run the complete `supabase-v3.sql` file once. It adds comments, contributions and FIRE settings while keeping existing snapshot data.
-3. Replace the old GitHub repository files with all V3 files.
-4. If the installed phone app still shows V2, remove it from the Home Screen, refresh the website, then add it again.
+## Upgrade
+1. Open Supabase SQL Editor.
+2. Run `supabase-v4.sql` once. It is safe for existing V2/V3 data.
+3. Replace the old GitHub Pages files with all files in this folder.
+4. Hard refresh the browser. If an installed Home Screen version remains cached, remove it and add it again.
 
-## New in V3
-- Snapshot comments
-- NW / NW without pension chart toggle
-- Create and edit assets
-- Classify every asset by asset class, risk and country
-- Allocation selector for asset class, risk, country, currency or individual asset
-- Optional net contribution field and residual market + FX effect
-- FIRE target and progress
-- Full-date storage with Mon YYYY display
-- CSV import/export
-- Online current or historical SEK/INR reference rate
-- Supabase login and private cloud data
-- Installable PWA
+## V4 features
+- Current allocation by asset class, risk, country, currency or asset
+- Portfolio insights replacing the duplicate breakdown card
+- 100% stacked asset-class evolution
+- Equity share trend
+- Risk evolution
+- Country exposure evolution
+- NW / without-pension controls
+- Annual review with start/end NW, contributions, residual market + FX effect, best/worst month, equity shift and yearly notes
+- FIRE progress, milestones and contribution summaries
+- Comments, editable history, custom assets/classifications, CSV import/export and online FX rates
 
-## Contribution logic
-Enter net new money added during the period in SEK. The app calculates:
-`Market + FX effect = change in net worth - net contribution`
-This residual combines market movement and currency movement. It does not falsely claim to separate those two without transaction-level data.
+## Important interpretation
+`Market + FX effect = net-worth change - recorded net contribution`. With monthly balance snapshots alone, market movement and currency movement cannot be separated reliably, so V4 labels the combined residual honestly.
